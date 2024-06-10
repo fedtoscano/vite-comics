@@ -116,40 +116,59 @@ export default {
 
 <template>
     <footer>
-        <div class="navbar-container">
-            
-            <h2>DC COMICS</h2>
-            <ul id="dc-comics-ul">
-                <li v-for="el in dcComicsUlEls":key="el.id">
-                    <a href="#">{{ el.text }}</a>
-                </li>
-            </ul>
 
-            <h2>SHOP</h2>
-            <ul id="shop-ul">
-                <li v-for="el in shopUlEls":key="el.id">
-                    <a href="#">{{ el.text }}</a>
-                </li>
-            </ul>
-
-            <h2>DC</h2>
-            <ul id="dc-ul">
-                <li v-for="el in dcUlEls":key="el.id">
-                    <a href="#">{{ el.text }}</a>
-                </li>
-            </ul>
-
-                <h2>SITES</h2>
-            <ul id="sites-ul">
-                <li v-for="el in sitesUlEls":key="el.id">
-                    <a href="#">{{ el.text }}</a>
-                </li>
-            </ul>
-
+        <div class="footer-top">
+            <div class="navbar-container">
+                
+                <h2>DC COMICS</h2>
+                <ul id="dc-comics-ul">
+                    <li v-for="el in dcComicsUlEls":key="el.id">
+                        <a href="#">{{ el.text }}</a>
+                    </li>
+                </ul>
+    
+                <h2>SHOP</h2>
+                <ul id="shop-ul">
+                    <li v-for="el in shopUlEls":key="el.id">
+                        <a href="#">{{ el.text }}</a>
+                    </li>
+                </ul>
+    
+                <h2>DC</h2>
+                <ul id="dc-ul">
+                    <li v-for="el in dcUlEls":key="el.id">
+                        <a href="#">{{ el.text }}</a>
+                    </li>
+                </ul>
+    
+                    <h2>SITES</h2>
+                <ul id="sites-ul">
+                    <li v-for="el in sitesUlEls":key="el.id">
+                        <a href="#">{{ el.text }}</a>
+                    </li>
+                </ul>
+    
+            </div>
+    
+            <div class="dc-logo-container">
+                <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
         </div>
-
-        <div class="dc-logo-container">
-            <img src="../assets/img/dc-logo-bg.png" alt="">
+        
+        <div class="footer-bottom">
+            <div class="sign-up">
+                <button>SIGN UP NOW!</button>
+            </div>
+            <div class="follow-us">
+                <span>FOLLOW US</span>
+                <div class="socials-container">
+                    <img src="../assets/img/footer-facebook.png" alt="">
+                    <img src="../assets/img/footer-twitter.png" alt="">
+                    <img src="../assets/img/footer-youtube.png" alt="">
+                    <img src="../assets/img/footer-periscope.png" alt="">
+                    <img src="../assets/img/footer-pinterest.png" alt="">
+                </div>
+            </div>
         </div>
 
     </footer>
@@ -159,26 +178,63 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
+@import "../styles/variables.scss";
 
 footer{
-    padding: 4em;
-    font-size: .8em;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
     color: white;
     height: 600px;
+    background-size: cover;
     background-image: url(../assets/img/footer-bg.jpg);
 }
 
 ul{
     @include footerUlStyle()
 }
+.footer-top{
+    padding: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom{
+    padding: 3em;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    justify-content: space-between;
+    button{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        padding: 1em;
+        border: 1px solid $color-blue;
+        background-color: rgb(48, 48, 48);
+    }
+        .follow-us{
+            display: flex;
+            justify-content: space-around;
+            gap: 2em;
+            color: blue;
+            font-size: 1.5em;
+
+                span{
+                    color: $color-blue;
+                }
+        }
+
+        .socials-container img{
+            margin-left: 1em;
+        }
+}
 
 .navbar-container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100%;
+    height: 500px;
 }
 
 .dc-logo-container{
@@ -190,6 +246,7 @@ ul{
 }
 
 h2{
+    padding: 0 3em;
     font-weight: 800;
 }
 </style>
