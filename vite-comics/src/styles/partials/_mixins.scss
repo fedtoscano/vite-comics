@@ -1,0 +1,10 @@
+@mixin ulStyle{
+        list-style-type: none;
+        display: flex;
+        gap: 2em;
+    
+        & li a{
+            text-decoration: none;
+            color: black;
+        }
+    }
