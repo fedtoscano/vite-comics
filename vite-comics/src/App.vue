@@ -2,12 +2,14 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
+import AppBlueNav from "./components/AppBlueNav.vue"
 
 export default {
   components: {
     AppHeader,
     AppMain,
-    AppFooter
+    AppBlueNav,
+    AppFooter,
   },
   data() {
     return {
@@ -19,6 +21,7 @@ export default {
 <template>
     <AppHeader />
     <AppMain />
+    <AppBlueNav />
     <AppFooter />
 </template>
 
