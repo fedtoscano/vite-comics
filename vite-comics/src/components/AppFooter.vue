@@ -116,32 +116,38 @@ export default {
 
 <template>
     <footer>
-                <div class="navbar-container">
+        <div class="navbar-container">
 
+                <h2>DC COMICS</h2>
             <ul id="dc-comics-ul">
                 <li v-for="el in dcComicsUlEls":key="el.id">
                     <a href="#">{{ el.text }}</a>
                 </li>
             </ul>
 
+                <h2>SHOP</h2>
             <ul id="shop-ul">
                 <li v-for="el in shopUlEls":key="el.id">
                     <a href="#">{{ el.text }}</a>
                 </li>
             </ul>
 
+                <h2>DC</h2>
             <ul id="dc-ul">
                 <li v-for="el in dcUlEls":key="el.id">
                     <a href="#">{{ el.text }}</a>
                 </li>
             </ul>
 
+                <h2>SITES</h2>
             <ul id="sites-ul">
                 <li v-for="el in sitesUlEls":key="el.id">
                     <a href="#">{{ el.text }}</a>
                 </li>
             </ul>
+
         </div>
+
     <div class="footer-bottom"></div>
     </footer>
 
@@ -150,7 +156,23 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
+
+footer{
+    color: white;
+    height: 400px;
+    background-image: url(../assets/img/footer-bg.jpg);
+}
+
 ul{
-    $ulStyle
+    @include footerUlStyle()
+}
+
+.navbar-container{
+    height: 100%;
+}
+
+h2{
+    font-weight: 800;
+    margin-bottom: 1.5em;
 }
 </style>
