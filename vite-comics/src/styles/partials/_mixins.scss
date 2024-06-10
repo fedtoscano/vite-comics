@@ -1,11 +1,9 @@
-
-
-
 @mixin footerUlStyle{
     list-style-type: none;
+    margin-bottom: 2em;
 
     a{
         text-decoration: none;
-    color:#828282 ;
+        color:#828282 ;
     }
 }

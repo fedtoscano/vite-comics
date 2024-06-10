@@ -117,22 +117,22 @@ export default {
 <template>
     <footer>
         <div class="navbar-container">
-
-                <h2>DC COMICS</h2>
+            
+            <h2>DC COMICS</h2>
             <ul id="dc-comics-ul">
                 <li v-for="el in dcComicsUlEls":key="el.id">
                     <a href="#">{{ el.text }}</a>
                 </li>
             </ul>
 
-                <h2>SHOP</h2>
+            <h2>SHOP</h2>
             <ul id="shop-ul">
                 <li v-for="el in shopUlEls":key="el.id">
                     <a href="#">{{ el.text }}</a>
                 </li>
             </ul>
 
-                <h2>DC</h2>
+            <h2>DC</h2>
             <ul id="dc-ul">
                 <li v-for="el in dcUlEls":key="el.id">
                     <a href="#">{{ el.text }}</a>
@@ -148,7 +148,10 @@ export default {
 
         </div>
 
-    <div class="footer-bottom"></div>
+        <div class="dc-logo-container">
+            <img src="../assets/img/dc-logo-bg.png" alt="">
+        </div>
+
     </footer>
 
 
@@ -158,8 +161,12 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 footer{
+    padding: 4em;
+    font-size: .8em;
+    display: flex;
+    justify-content: space-between;
     color: white;
-    height: 400px;
+    height: 600px;
     background-image: url(../assets/img/footer-bg.jpg);
 }
 
@@ -168,11 +175,21 @@ ul{
 }
 
 .navbar-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 100%;
+}
+
+.dc-logo-container{
+    width: 400px;
+
+    img{
+        width: 100%;
+    }
 }
 
 h2{
     font-weight: 800;
-    margin-bottom: 1.5em;
 }
 </style>
