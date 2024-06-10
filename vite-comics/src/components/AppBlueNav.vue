@@ -41,6 +41,7 @@ export default {
             <li v-for="item in navBarItems" :key="item.id">
                 <img :src="item.img" :alt="`${item.text} logo`">
                 <span> {{ item.text.toUpperCase() }} </span>
+                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
             </li>
         </ul>
     </nav>
@@ -48,7 +49,10 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../styles/variables.scss"
+@import "../styles/variables.scss";
 
+nav{
+    background-color: $color-blue;
+}
 
 </style>
