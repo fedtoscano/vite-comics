@@ -18,7 +18,6 @@ return {
         background-image: url(../assets/img/jumbotron.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-
     }
     img{
         width: 100%;
