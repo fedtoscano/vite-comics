@@ -49,7 +49,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../styles/variables.scss";
+@import "../styles/partials/variables.scss";
 
 nav{
     background-color: $color-blue;

@@ -30,6 +30,7 @@ props: {
         span{
             text-align: center;
         }
+        
         img{
             width: 100%;
             height: 80%;

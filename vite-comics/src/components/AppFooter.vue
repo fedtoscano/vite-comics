@@ -178,7 +178,6 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
-@import "../styles/variables.scss";
 
 footer{
     display: flex;

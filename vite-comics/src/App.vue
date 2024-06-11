@@ -2,7 +2,9 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
-import AppBlueNav from "./components/AppBlueNav.vue"
+import AppBlueNav from "./components/AppBlueNav.vue";
+import AppJumbotron from "./components/AppJumbotron.vue"
+
 
 export default {
   components: {
@@ -10,7 +12,10 @@ export default {
     AppMain,
     AppBlueNav,
     AppFooter,
+    AppJumbotron,
+
   },
+  
   data() {
     return {
     };
@@ -20,6 +25,7 @@ export default {
 
 <template>
     <AppHeader />
+    <AppJumbotron/>
     <AppMain />
     <AppBlueNav />
     <AppFooter />

@@ -1,3 +1,6 @@
+
+@import "variables.scss";
+
 @mixin footerUlStyle{
     list-style-type: none;
     margin-bottom: 2.5em;
@@ -9,4 +12,13 @@
         text-decoration: none;
         color:#828282 ;
     }
+}
+
+@mixin buttonStyle{
+    padding: 1rem 3rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    background-color: $color-blue;
 }
