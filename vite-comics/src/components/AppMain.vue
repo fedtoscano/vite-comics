@@ -1,22 +1,29 @@
 <script>
+//importo cardList
+import CardList from "./cardsComponents/CardList.vue";
+
 export default {
+    components: {
+        CardList,
+    },
     data() {
     return {
         
     }
     }
+
 }
 </script>
 
 <template>
     <main>
-        <h1> -> CONTENT GOES HERE <-</h1>
+        <CardList/>
     </main>
 </template>
 
 <style scoped lang="scss">
 main{
-    padding: 1rem 4rem;
+    padding: 2rem 6rem;
     background-color: black;
 
     h1{
@@ -24,5 +31,4 @@ main{
         text-align: center;
     }
 }
-
 </style>
