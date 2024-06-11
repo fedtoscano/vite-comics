@@ -8,19 +8,20 @@ return {
 
 <template>
     <div class="img-container">
-        <img src="../assets/img/jumbotron.jpg" alt="">
     </div>
 </template>
 
 <style scoped>
     .img-container{
         width: 100%;
-        height: 500px;
+        height: 375px;
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
 
     }
     img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
     }
 </style>
