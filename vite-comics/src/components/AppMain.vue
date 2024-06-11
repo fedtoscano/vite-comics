@@ -16,11 +16,8 @@ export default {
 
 <template>
     <main>
-        <span class="series">
-            current series
-        </span>
+        <span class="series">current series</span>
         <CardList/>
-
         <button>Load More</button>
     </main>
 </template>

@@ -120,29 +120,29 @@ export default {
         <div class="footer-top">
             <div class="navbar-container">
                 
-                <h2>DC COMICS</h2>
                 <ul id="dc-comics-ul">
+                    <li>DC COMICS</li>
                     <li v-for="el in dcComicsUlEls":key="el.id">
                         <a href="#">{{ el.text }}</a>
                     </li>
                 </ul>
     
-                <h2>SHOP</h2>
                 <ul id="shop-ul">
+                    <li>SHOP</li>
                     <li v-for="el in shopUlEls":key="el.id">
                         <a href="#">{{ el.text }}</a>
                     </li>
                 </ul>
     
-                <h2>DC</h2>
                 <ul id="dc-ul">
+                    <li>DC</li>
                     <li v-for="el in dcUlEls":key="el.id">
                         <a href="#">{{ el.text }}</a>
                     </li>
                 </ul>
     
-                    <h2>SITES</h2>
                 <ul id="sites-ul">
+                    <li>SITES</li>
                     <li v-for="el in sitesUlEls":key="el.id">
                         <a href="#">{{ el.text }}</a>
                     </li>
@@ -190,8 +190,13 @@ footer{
 }
 
 ul{
-    @include footerUlStyle()
+    @include footerUlStyle();
+        & li:first-of-type{
+        text-transform: uppercase;
+        font-weight: 600;
+        }
 }
+
 .footer-top{
     padding: 3em;
     width: 100%;
@@ -232,8 +237,10 @@ ul{
 .navbar-container{
     display: flex;
     flex-direction: column;
+    align-items: start;
     flex-wrap: wrap;
-    height: 500px;
+    height: 400px;
+    font-size: .8em;
 }
 
 .dc-logo-container{
@@ -245,7 +252,7 @@ ul{
 }
 
 h2{
-    padding: 0 3em;
+    margin-bottom: .8em;
     font-weight: 800;
 }
 </style>
